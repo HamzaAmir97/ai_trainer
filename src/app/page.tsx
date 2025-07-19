@@ -1,3 +1,4 @@
+"use client";
 // import TerminalOverlay from "@/components/TerminalOverlay";
 import TerminalOverlay from "@/components/TerminalOverlay";
 import { Button } from "@/components/ui/button";
@@ -5,8 +6,24 @@ import UserPrograms from "@/components/UserProgramsn";
 // import UserPrograms from "@/components/UserPrograms";
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
+import { motion, useInView, Variants } from "framer-motion";
+import { useRef } from "react";
+
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
 
 const HomePage = () => {
+  const leftContentRef = useRef(null);
+  const rightContentRef = useRef(null);
+  const isLeftInView = useInView(leftContentRef, { once: true, margin: "-100px" });
+  const isRightInView = useInView(rightContentRef, { once: true, margin: "-100px" });
+
   return (
     <div className="flex flex-col min-h-screen text-foreground overflow-hidden">
       <section className="relative z-10 py-24 flex-grow">
@@ -16,8 +33,19 @@ const HomePage = () => {
             <div className="absolute -top-10 left-0 w-40 h-40 border-l-2 border-t-2" />
 
             {/* LEFT SIDE CONTENT */}
-            <div className="lg:col-span-7 space-y-8 relative">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+            <motion.div
+              ref={leftContentRef}
+              variants={fadeUp}
+              initial="hidden"
+              animate={isLeftInView ? "visible" : "hidden"}
+              className="lg:col-span-7 space-y-8 ml-10 relative"
+            >
+              <motion.h1
+                variants={fadeUp}
+                initial="hidden"
+                animate={isLeftInView ? "visible" : "hidden"}
+                className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight"
+              >
                 <div>
                   <span className="text-foreground">Transform</span>
                 </div>
@@ -31,18 +59,33 @@ const HomePage = () => {
                   <span className="text-foreground">AI</span>
                   <span className="text-primary"> Technology</span>
                 </div>
-              </h1>
+              </motion.h1>
 
               {/* SEPERATOR LINE */}
-              <div className="h-px w-full bg-gradient-to-r from-primary via-secondary to-primary opacity-50"></div>
+              <motion.div
+                variants={fadeUp}
+                initial="hidden"
+                animate={isLeftInView ? "visible" : "hidden"}
+                className="h-px w-full bg-gradient-to-r from-primary via-secondary to-primary opacity-50"
+              ></motion.div>
 
-              <p className="text-xl text-muted-foreground w-2/3">
+              <motion.p
+                variants={fadeUp}
+                initial="hidden"
+                animate={isLeftInView ? "visible" : "hidden"}
+                className="text-xl text-muted-foreground w-2/3"
+              >
                 Talk to our AI assistant and get personalized diet plans and workout routines
                 designed just for you
-              </p>
+              </motion.p>
 
               {/* STATS */}
-              <div className="flex items-center gap-10 py-6 font-mono">
+              <motion.div
+                variants={fadeUp}
+                initial="hidden"
+                animate={isLeftInView ? "visible" : "hidden"}
+                className="flex items-center gap-10 py-6 font-mono"
+              >
                 <div className="flex flex-col">
                   <div className="text-2xl text-primary">500+</div>
                   <div className="text-xs uppercase tracking-wider">ACTIVE USERS</div>
@@ -57,10 +100,15 @@ const HomePage = () => {
                   <div className="text-2xl text-primary">100%</div>
                   <div className="text-xs uppercase tracking-wider">PERSONALIZED</div>
                 </div>
-              </div>
+              </motion.div>
 
               {/* BUTTON */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-6">
+              <motion.div
+                variants={fadeUp}
+                initial="hidden"
+                animate={isLeftInView ? "visible" : "hidden"}
+                className="flex flex-col sm:flex-row gap-4 pt-6"
+              >
                 <Button
                   size="lg"
                   asChild
@@ -71,14 +119,17 @@ const HomePage = () => {
                     <ArrowRightIcon className="ml-2 size-5" />
                   </Link>
                 </Button>
-              </div>
-            </div>
-
-
-
+              </motion.div>
+            </motion.div>
 
             {/* RIGHT SIDE CONTENT */}
-            <div className="lg:col-span-5 relative">
+            <motion.div
+              ref={rightContentRef}
+              variants={fadeUp}
+              initial="hidden"
+              animate={isRightInView ? "visible" : "hidden"}
+              className="lg:col-span-5 relative"
+            >
               {/* CORNER PIECES */}
               <div className="absolute -inset-4 pointer-events-none">
                 <div className="absolute top-0 left-0 w-16 h-16 border-l-2 border-t-2 border-border" />
@@ -109,7 +160,7 @@ const HomePage = () => {
                     <div className="absolute top-0 left-1/2 h-1/4 w-px bg-primary/50" />
                     <div className="absolute bottom-0 left-1/2 h-1/4 w-px bg-primary/50" />
                   </div>
-  
+
                   {/* OVERLAY  */}
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
                 </div>
@@ -117,7 +168,7 @@ const HomePage = () => {
                 {/* TERMINAL OVERLAY */}
                 <TerminalOverlay />
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

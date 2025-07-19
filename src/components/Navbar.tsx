@@ -14,21 +14,21 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between">
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="p-1 bg-primary/10 rounded">
+          <div className="p-1   hidden lg:block ml-10 bg-primary/10 rounded">
             <ZapIcon className="w-4 h-4 text-primary" />
           </div>
-          <span className="text-xl font-bold font-mono">
-            Super<span className="text-primary">Fitness</span>.ai
+          <span className="text-xl  hidden lg:block font-bold font-mono ">
+            Super<span className="text-primary ">Fitness</span>.ai
           </span>
         </Link>
 
         {/* NAVIGATION */}
-        <nav className="flex items-center gap-5">
+        <nav className="flex  items-center gap-5  mr-5">
           {isSignedIn ? (
             <>
               <Link
                 href="/"
-                className="flex items-center gap-1.5 text-sm hover:text-primary transition-colors"
+                className="flex items-center gap-1.5  text-sm hover:text-primary transition-colors"
               >
                 <HomeIcon size={16} />
                 <span>Home</span>
