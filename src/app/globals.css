@@ -2,7 +2,6 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -44,127 +43,107 @@
 }
 
 :root {
-  /* Base Variables */
   --radius: 0.625rem;
 
-  /* Cyberpunk Theme Colors */
+  /* Cyber Green Theme Colors */
   --cyber-black: #000000;
-  --cyber-dark: #0a0c14;
-  --cyber-blue-bright: #18cef2;
-  --cyber-blue: #1089bd;
-  --cyber-blue-dark: #0b4a7d;
-  --cyber-blue-glow: #38bdf8;
-  --cyber-accent: #0ff4;
+  --cyber-dark: #041404; /* Darker green background */
+  --cyber-green-bright: #38ff38; /* Bright green for primary elements */
+  --cyber-green: #00b300; /* Medium green */
+  --cyber-green-dark: #007d00; /* Darker green */
+  --cyber-green-glow: #5aff5a; /* Green glow effect */
+  --cyber-accent: #0cf00c; /* Accent green */
 
-  /* Background */
   --background: var(--cyber-dark);
-  --foreground: #f2f2f2;
+  --foreground: #f2f2f2; /* Light foreground for text */
 
-  /* Card and popover elements */
-  --card: #111827;
+  --card: #0a1e0a; /* Dark green for cards */
   --card-foreground: #f2f2f2;
-  --popover: #111827;
+  --popover: #0a1e0a;
   --popover-foreground: #f2f2f2;
 
-  /* Primary - Main blue */
-  --primary: var(--cyber-blue-bright);
+  --primary: var(--cyber-green-bright);
   --primary-foreground: var(--cyber-dark);
 
-  /* Secondary - Darker blue */
-  --secondary: var(--cyber-blue);
+  --secondary: var(--cyber-green);
   --secondary-foreground: #ffffff;
 
-  /* Accent - Light blue with glow */
-  --accent: var(--cyber-blue-glow);
+  --accent: var(--cyber-green-glow);
   --accent-foreground: var(--cyber-dark);
 
-  /* Muted elements */
-  --muted: #1e293b;
-  --muted-foreground: #94a3b8;
+  --muted: #0d2a0d; /* Muted green */
+  --muted-foreground: #a5fca5; /* Lighter muted green */
 
-  /* System colors */
-  --destructive: #ef4444;
-  --border: rgba(24, 206, 242, 0.2);
-  --input: rgba(24, 206, 242, 0.2);
-  --ring: var(--cyber-blue);
+  --destructive: #44ef44; /* Green for destructive actions (can be adjusted if needed) */
+  --border: rgba(56, 255, 56, 0.2); /* Green border with transparency */
+  --input: rgba(56, 255, 56, 0.2); /* Green input border with transparency */
+  --ring: var(--cyber-green);
 
-  /* Chart colors - cyberpunk theme */
-  --chart-1: var(--cyber-blue-bright);
-  --chart-2: #3b82f6;
-  --chart-3: var(--cyber-blue);
-  --chart-4: #06b6d4;
-  --chart-5: #0284c7;
+  --chart-1: var(--cyber-green-bright);
+  --chart-2: #71f871;
+  --chart-3: var(--cyber-green);
+  --chart-4: #26dc26;
+  --chart-5: #1b991b;
 
-  /* Sidebar colors */
   --sidebar: var(--cyber-dark);
   --sidebar-foreground: #f2f2f2;
-  --sidebar-primary: var(--cyber-blue-bright);
+  --sidebar-primary: var(--cyber-green-bright);
   --sidebar-primary-foreground: var(--cyber-dark);
-  --sidebar-accent: var(--cyber-blue);
+  --sidebar-accent: var(--cyber-green);
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: rgba(24, 206, 242, 0.2);
-  --sidebar-ring: var(--cyber-blue);
+  --sidebar-border: rgba(56, 255, 56, 0.2);
+  --sidebar-ring: var(--cyber-green);
 
-  /* Custom Cyberpunk UI Variables */
-  --cyber-grid-color: rgba(24, 206, 242, 0.05);
-  --cyber-glow-primary: rgba(24, 206, 242, 0.2);
-  --cyber-glow-strong: rgba(24, 206, 242, 0.5);
-  --cyber-line-color: rgba(24, 206, 242, 0.3);
-  --cyber-terminal-bg: rgba(0, 0, 0, 0.7);
+  --cyber-grid-color: rgba(56, 255, 56, 0.05); /* Green grid with transparency */
+  --cyber-glow-primary: rgba(56, 255, 56, 0.2); /* Green glow primary */
+  --cyber-glow-strong: rgba(56, 255, 56, 0.5); /* Stronger green glow */
+  --cyber-line-color: rgba(56, 255, 56, 0.3); /* Green line with transparency */
+  --cyber-terminal-bg: rgba(0, 0, 0, 0.7); /* Terminal background remains dark */
   --cyber-text-bright: #ffffff;
   --cyber-text-muted: rgba(242, 242, 242, 0.7);
   --cyber-text-dim: rgba(242, 242, 242, 0.5);
 }
 
 .dark {
-  /* Background */
   --background: var(--cyber-dark);
   --foreground: #f2f2f2;
 
-  /* Card and popover elements */
-  --card: #111827;
+  --card: #0a1e0a;
   --card-foreground: #f2f2f2;
-  --popover: #111827;
+  --popover: #0a1e0a;
   --popover-foreground: #f2f2f2;
 
-  /* Primary - Main blue */
-  --primary: var(--cyber-blue-bright);
+  --primary: var(--cyber-green-bright);
   --primary-foreground: var(--cyber-dark);
 
-  /* Secondary - Darker blue */
-  --secondary: var(--cyber-blue);
+  --secondary: var(--cyber-green);
   --secondary-foreground: #ffffff;
 
-  /* Accent - Light blue with glow */
-  --accent: var(--cyber-blue-glow);
+  --accent: var(--cyber-green-glow);
   --accent-foreground: var(--cyber-dark);
 
-  /* Muted elements */
-  --muted: #1e293b;
-  --muted-foreground: #94a3b8;
+  --muted: #0d2a0d;
+  --muted-foreground: #a5fca5;
 
-  /* System colors */
-  --destructive: #ef4444;
-  --border: rgba(24, 206, 242, 0.2);
-  --input: rgba(24, 206, 242, 0.2);
-  --ring: var(--cyber-blue);
+  --destructive: #44ef44;
+  --border: rgba(56, 255, 56, 0.2);
+  --input: rgba(56, 255, 56, 0.2);
+  --ring: var(--cyber-green);
 
-  /* Chart colors - cyberpunk theme */
-  --chart-1: var(--cyber-blue-bright);
-  --chart-2: #3b82f6;
-  --chart-3: var(--cyber-blue);
-  --chart-4: #06b6d4;
-  --chart-5: #0284c7;
+  --chart-1: var(--cyber-green-bright);
+  --chart-2: #71f871;
+  --chart-3: var(--cyber-green);
+  --chart-4: #26dc26;
+  --chart-5: #1b991b;
 
-  /* Sidebar colors */
   --sidebar: var(--cyber-dark);
   --sidebar-foreground: #f2f2f2;
-  --sidebar-primary: var(--cyber-blue-bright);
+  --sidebar-primary: var(--cyber-green-bright);
   --sidebar-primary-foreground: var(--cyber-dark);
-  --sidebar-accent: var(--cyber-blue);
+  --sidebar-accent: var(--cyber-green);
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: rgba(24, 206, 242, 0.2);
-  --sidebar-ring: var(--cyber-blue);
+  --sidebar-border: rgba(56, 255, 56, 0.2);
+  --sidebar-ring: var(--cyber-green);
 }
 
 @layer base {
@@ -190,7 +169,6 @@
   }
 }
 
-/* TODO: EXPLAIN THIS BC U PROMISED JUST IN THE FIRST SECTION */
 @keyframes slow-spin {
   from {
     transform: rotate(0deg);
