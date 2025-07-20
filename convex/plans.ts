@@ -60,3 +60,4 @@ export const getUserPlans = query({
     return plans;
   },
 });
+

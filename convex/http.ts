@@ -14,7 +14,7 @@ http.route({
 
     //NOTE:Verification Check
 
-
+    
   path: "/clerk-webhook",
   method: "POST",
   handler: httpAction(async (ctx, request) => {
@@ -64,7 +64,7 @@ http.route({
       const email = email_addresses[0].email_address;
 
       const name = `${first_name || ""} ${last_name || ""}`.trim();
-
+      
 
 
       //TODO:run User create methode
@@ -82,7 +82,6 @@ http.route({
         return new Response("Error creating user", { status: 500 });
       }
     }
-
 
 
     if (eventType === "user.updated") {
@@ -113,34 +112,34 @@ http.route({
 
 
 
-// // validate and fix workout plan to ensure it has proper numeric types
-// function validateWorkoutPlan(plan: any) {
-//   const validatedPlan = {
-//     schedule: plan.schedule,
-//     exercises: plan.exercises.map((exercise: any) => ({
-//       day: exercise.day,
-//       routines: exercise.routines.map((routine: any) => ({
-//         name: routine.name,
-//         sets: typeof routine.sets === "number" ? routine.sets : parseInt(routine.sets) || 1,
-//         reps: typeof routine.reps === "number" ? routine.reps : parseInt(routine.reps) || 10,
-//       })),
-//     })),
-//   };
-//   return validatedPlan;
-// }
+// validate and fix workout plan to ensure it has proper numeric types
+function validateWorkoutPlan(plan: any) {
+  const validatedPlan = {
+    schedule: plan.schedule,
+    exercises: plan.exercises.map((exercise: any) => ({
+      day: exercise.day,
+      routines: exercise.routines.map((routine: any) => ({
+        name: routine.name,
+        sets: typeof routine.sets === "number" ? routine.sets : parseInt(routine.sets) || 1,
+        reps: typeof routine.reps === "number" ? routine.reps : parseInt(routine.reps) || 10,
+      })),
+    })),
+  };
+  return validatedPlan;
+}
 
-// // validate diet plan to ensure it strictly follows schema
-// function validateDietPlan(plan: any) {
-//   // only keep the fields we want
-//   const validatedPlan = {
-//     dailyCalories: plan.dailyCalories,
-//     meals: plan.meals.map((meal: any) => ({
-//       name: meal.name,
-//       foods: meal.foods,
-//     })),
-//   };
-//   return validatedPlan;
-// }
+// validate diet plan to ensure it strictly follows schema
+function validateDietPlan(plan: any) {
+  // only keep the fields we want
+  const validatedPlan = {
+    dailyCalories: plan.dailyCalories,
+    meals: plan.meals.map((meal: any) => ({
+      name: meal.name,
+      foods: meal.foods,
+    })),
+  };
+  return validatedPlan;
+}
 
 http.route({
   path: "/vapi/generate-program",
@@ -269,7 +268,7 @@ http.route({
       let dietPlan = JSON.parse(dietPlanText);
       dietPlan = validateDietPlan(dietPlan);
 
-      // save to our DB: CONVEX
+      // save to our DB: CONVEX   
       const planId = await ctx.runMutation(api.plans.createPlan, {
         userId: user_id,
         dietPlan,
