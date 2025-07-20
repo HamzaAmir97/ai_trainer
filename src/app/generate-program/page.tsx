@@ -125,9 +125,9 @@ const GenerateProgramPage = () => {
               },
             },
           
-            undefined, // ما فيش squad
+            undefined, // squad
           
-            "0f1633bd-0a12-4d32-b91f-24a15d659641" // 👈 عوّضها بـ workflow ID الحقيقي
+            process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID! // 👈workflow ID
           );
           
 
