@@ -113,11 +113,11 @@ const GenerateProgramPage = () => {
         const fullName = user?.firstName
           ? `${user.firstName} ${user.lastName || ""}`.trim()
           : "Buudy";
-         
+          console.log("fullName", fullName);
 
           await vapi.start(
-            undefined, // assistantId
-          
+            
+            process.env.NEXT_PUBLIC_VAPI_ASSISTANT_KEY!,         
             {
               variableValues: {
                 name: fullName,
@@ -125,9 +125,9 @@ const GenerateProgramPage = () => {
               },
             },
           
-            undefined, // squad
+            // undefined, // squad
           
-            process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID! // 👈workflow ID
+            // process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID! // 👈workflow ID
           );
           
 

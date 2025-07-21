@@ -142,10 +142,16 @@ function validateDietPlan(plan: any) {
 }
 
 http.route({
-  path: "/vapi/generate-program",
+  path: "/vapi/plans",
   method: "POST",
   handler: httpAction(async (ctx, request) => {
+    console.log("hi here");
+   
     try {
+
+      console.log("Request is here:", request);
+
+
       const payload = await request.json();
 
       const {
@@ -304,6 +310,9 @@ http.route({
         }
       );
     }
+
+
+
   }),
 });
 
