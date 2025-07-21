@@ -18,15 +18,12 @@ AI Trainer is a web application that leverages artificial intelligence to genera
 
 ## 📋 Table of Contents
 
-- [🤖 Introduction](#-introduction)
 - [⚙️ Tech Stack](#️-tech-stack)
 - [🔋 Features](#-features)
 - [🤸 Quick Start](#-quick-start)
 - [🚀 Deployment](#-deployment)
 
-## 🤖 Introduction
 
-Create a personalized fitness experience from scratch with AI Trainer! This application features user authentication, AI-powered workout generation, and an interactive voice agent for a seamless, hands-free training session.
 
 ## ⚙️ Tech Stack
 
@@ -47,7 +44,6 @@ Create a personalized fitness experience from scratch with AI Trainer! This appl
 - **🔐 Secure Authentication:** Easy sign-up and sign-in with Clerk, supporting various social providers.
 - **⚡ Real-time Database:** Seamless data handling and synchronization with Convex.
 - **📱 Responsive Design:** A clean, modern UI built with Tailwind CSS that works on any device.
-- **🛠️ Modular Codebase:** Reusable components and a clear structure for efficient development.
 
 ## 🤸 Quick Start
 
