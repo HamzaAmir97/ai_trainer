@@ -5,13 +5,13 @@ AI Trainer is a web application that leverages artificial intelligence to genera
 ## 📸 Screenshots
 
 <div align="center">
-<img src="/public/screenshots/superfitness(1).png" alt="Screenshot 1" width="800"/>
+<img src="screenshots/superfitness(1).png" alt="Screenshot 1" width="800"/>
 </div>
 
 <table align="center">
   <tr>
-    <td><img src="/public/screenshots/superfitness(2).png" alt="Screenshot 2" width="400"/></td>
-    <td><img src="/public/screenshots/superfitness(3).png" alt="Screenshot 3" width="400"/></td>
+    <td><img src="screenshots/superfitness(2).png" alt="Screenshot 2" width="400"/></td>
+    <td><img src="screenshots/superfitness(3).png" alt="Screenshot 3" width="400"/></td>
   </tr>
 </table>
 
