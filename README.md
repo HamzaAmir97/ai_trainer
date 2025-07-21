@@ -4,9 +4,16 @@ AI Trainer is a web application that leverages artificial intelligence to genera
 
 ## 📸 Screenshots
 
-![App Screenshot 1](/public/screenshots/superfitness(1).png)
-![App Screenshot 2](/public/screenshots/superfitness(2).png)
-![App Screenshot 3](/public/screenshots/superfitness(3).png)
+<div align="center">
+<img src="/public/screenshots/superfitness(1).png" alt="Screenshot 1" width="800"/>
+</div>
+
+<table align="center">
+  <tr>
+    <td><img src="/public/screenshots/superfitness(2).png" alt="Screenshot 2" width="400"/></td>
+    <td><img src="/public/screenshots/superfitness(3).png" alt="Screenshot 3" width="400"/></td>
+  </tr>
+</table>
 
 
 ## 📋 Table of Contents
@@ -23,13 +30,15 @@ Create a personalized fitness experience from scratch with AI Trainer! This appl
 
 ## ⚙️ Tech Stack
 
-- **[Next.js](https://nextjs.org/):** A powerful React framework for building fast, scalable web applications with server-side rendering and static site generation.
-- **[Convex](https://www.convex.dev/):** A modern backend-as-a-service platform that provides a real-time database, server functions, and file storage.
-- **[Clerk](https://clerk.com/):** A unified platform for authentication and user management, offering embeddable UI components and flexible APIs.
-- **[Google Generative AI](https://ai.google/):** Powers the intelligent generation of personalized workout plans.
-- **[Vapi AI](https://vapi.ai/):** A developer-centric voice AI platform for creating low-latency, conversational voice agents.
-- **[Tailwind CSS](https://tailwindcss.com/):** A utility-first CSS framework for rapidly building custom user interfaces.
-- **[TypeScript](https://www.typescriptlang.org/):** A superset of JavaScript that adds static typing for better code quality and error detection.
+<div align="center">
+  <a href="https://nextjs.org/" target="_blank"><img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js"/></a>
+  <a href="https://www.convex.dev/" target="_blank"><img src="https://img.shields.io/badge/Convex-222222?style=for-the-badge&logo=convex&logoColor=white" alt="Convex"/></a>
+  <a href="https://clerk.com/" target="_blank"><img src="https://img.shields.io/badge/Clerk-6C47FF?style=for-the-badge&logo=clerk&logoColor=white" alt="Clerk"/></a>
+  <a href="https://ai.google/" target="_blank"><img src="https://img.shields.io/badge/Google%20Generative%20AI-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Google Generative AI"/></a>
+  <a href="https://vapi.ai/" target="_blank"><img src="https://img.shields.io/badge/Vapi%20AI-FF6B6B?style=for-the-badge" alt="Vapi AI"/></a>
+  <a href="https://tailwindcss.com/" target="_blank"><img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS"/></a>
+  <a href="https://www.typescriptlang.org/" target="_blank"><img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/></a>
+</div>
 
 ## 🔋 Features
 
